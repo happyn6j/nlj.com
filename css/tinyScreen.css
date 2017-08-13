@@ -1,0 +1,68 @@
+.clouds{
+	height: 450px;
+}
+.clouds .cloud1{
+	display: none;
+}
+.clouds .cloud2{
+	top:0px;
+	right:0px;
+	width: 310px;
+	height: 182px;
+}
+.relateBox .relate{
+	left:50%;
+	margin-left: -160px;
+	margin-bottom: 0;
+}
+a.fallow{
+	margin:2px 6px;
+}
+.wave{
+	width: 1000px;
+	animation: flow 1s linear infinite;
+}
+@keyframes flow{
+	from{
+		left:-50%;
+	}
+	to{
+		left:0;
+	}
+}
+#about{
+	padding: 20px 0;
+}
+
+#about ul li{
+    width: 10px;
+    transition: width 0.5s ease-out;
+}
+#about ul li .info{
+	width: 360px;
+}
+#about ul li:hover{
+    width:10px;
+}
+#about ul:hover li:not(:hover){
+    width:10px;
+}
+.info_left{
+	width: 180px;
+	height: 360px;
+	padding: 4px;
+}
+.info_right{
+	width: 180px;
+	height: 360px;
+	padding: 4px;
+}
+#headImg{
+	height: 100px;
+}
+.skill_list .box{
+	padding:6px 0;
+}
+#contact{
+	height: 700px;
+}

@@ -1,0 +1,66 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑';
+	font-size: 18px;
+	font-weight: 800;
+}
+p{
+	font-weight:100;
+}
+i,u,s{
+	display: inline-block;
+}
+li{
+	list-style: none;
+}
+h2{
+	position: relative;
+	text-align: center;
+	color: #35536B;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+#headImg{
+	display: block;
+	border-radius: 50%;
+	height: 154px;
+	animation: sport 18s linear 0s infinite normal;
+	cursor: pointer;
+	border:3px solid #A0ACB6;
+	padding:2px 2px;
+	position: relative;
+	top:40px;
+	left:40px;
+}
+/*波浪动画*/
+.wavebox{
+	width: 100%;
+	height: 275px;
+	overflow: hidden;
+	position: absolute;
+	top: -20px;
+}
+.wave{
+	position: absolute;
+	width: 200%;
+	height: 275px;
+	background: url(../images/wave.png) repeat-x;
+	animation: flow 10s linear infinite;
+}
+.wave_1{
+	background: url(../images/wave_1.png) repeat-x;
+}
+@keyframes flow{
+	from{
+		left:-1200px;
+	}
+	to{
+		left:0;
+	}
+}
+/*波浪动画结束*/

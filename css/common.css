@@ -1,0 +1,309 @@
+
+/*nav开始*/
+#nav{
+	position:fixed;
+	top:0;
+	z-index: 999;
+}
+/*svg样式*/
+svg{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left:0;
+}
+path{
+	width: 100%;
+	fill:#FFB401;
+}
+/*svg样式结束*/
+/*nav结束*/
+/*home开始*/
+#home{
+	background:#F6E6CC;
+}
+.clouds{
+	width: 100%;
+	height: 600px;
+	position: relative;
+	margin:0 auto;
+}
+.clouds .cloud1{
+	position: absolute;
+	top: 10px;
+	left:-290px;
+	opacity:0;
+	width: 290px;
+	height: 208px;
+	animation: movecloud 10s linear 0.5s infinite normal;
+}
+.clouds .cloud2{
+	position: absolute;
+	bottom: 10px;
+	right:20px;
+	width: 620px;
+	height: 364px;
+}
+.relateBox .relate{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-bottom: 60px;
+	margin-left: 40px;
+}
+.relate ul li{
+	float: left;
+	margin:10px 10px;
+	position: relative;
+}
+.relate a{
+	color:#000;
+	font-size: 16px;
+	font-weight:100;
+}
+.fa{
+	position: absolute;
+	width: 48px;
+	height: 48px;
+}
+.fa:hover,
+.relate ul li:hover .ballShadow{
+	animation-play-state: paused;
+}
+.ballShadow{
+	position: absolute;
+	bottom: -4px;
+	left:14px;
+	width: 60px;
+	height: 20px;
+	border-radius: 50%;
+	background: #000;
+}
+a.fallow{
+	display: inline-block;
+	width: 48px;
+	margin:10px 20px;
+}
+.fa_github_acc{
+	animation: jump 1s infinite;
+}
+.fa_blog{
+	animation: jump 1.5s infinite;
+}
+.fa_xlwb_acc{
+	animation: jump 2s infinite;
+}
+.fa_bky_acc{
+	animation: jump 2.5s infinite;
+}
+.sh_1{
+	animation: shrink 1s ease-in infinite;
+}
+.sh_2{
+	animation: shrink 1.5s ease-in infinite;
+}
+.sh_3{
+	animation: shrink 2s ease-in infinite;
+}
+.sh_4{
+	animation: shrink 2.5s ease-in infinite;
+}
+@keyframes movecloud{
+	0%{
+		left:10px;
+		opacity:0;
+	}
+	25%{
+		left:20%;
+		opacity:0.3;
+	}
+	50%{
+		left:40%;
+		opacity:0.8;
+	}
+	75%{
+		left:60%;
+		opacity:0.5;
+	}
+	100%{
+		left:80%;
+		opacity:0;
+	}
+}
+@keyframes jump {
+	0% {
+		bottom: 160px;
+		animation-timing-function: ease-in;
+	}
+	50% {
+		bottom: 20px;
+		height: 48px;
+		animation-timing-function: ease-out;
+	}
+	55% {
+		bottom: 0px;
+		height: 36px;
+		border-radius: 70px / 60px;
+		animation-timing-function: ease-in;
+	}
+	65% {
+		bottom: 40px;
+		height: 48px;
+		border-radius: 70px;
+		animation-timing-function: ease-out;
+	}
+	95% {
+		bottom: 160px;
+		animation-timing-function: ease-in;
+	}
+	100% {
+		bottom: 160px;
+		-webkit-animation-timing-function: ease-in;
+	}
+}
+@keyframes shrink{
+	0% {
+		opacity: 0.05;
+    	transform: scale( 1 );
+	}
+	55% {
+		opacity: 0.2;
+    	transform: scale(0);
+	}
+	100% {
+		opacity: 0.05;
+    	transform: scale( 1 );
+	}
+}
+/*home结束*/
+/*about开始*/
+#about{
+	color: #685433;
+	background:#A0CBD2;
+	position: relative;
+	padding: 50px 0;
+}
+
+#about ul{
+	overflow:hidden;
+	padding-left: 10px;
+	position: relative;
+}
+#about ul li{
+    width: 200px;
+	height: 360px;
+	margin:10px 0;
+    transition: width 0.5s ease-out;
+}
+#about ul li .info{
+	width: 550px;
+	height: 360px;
+	background:#fff;
+	box-shadow: -5px -2px 10px #9F8D6B;
+	border-radius: 5%;
+}
+#about ul li:hover{
+    width:510px;
+}
+#about ul li:hover p,
+#about ul li:hover h3{
+	color: #fff;
+}
+#about ul li:hover .info{
+    background:#84BEC7;
+}
+#about ul:hover li:not(:hover){
+    width:200px;
+}
+#about ul li .info h3{
+	padding:10px 40px;
+}
+#about h6{
+	font-weight: 900;
+}
+p{
+	font-size: 12px
+}
+.info_left{
+	width: 260px;
+	height: 300px;
+	padding-left: 20px;
+}
+.info_right{
+	width: 260px;
+	height: 300px;
+	padding-right: 40px;
+}
+#headImg{
+	display: block;
+	border-radius: 50%;
+	height: 154px;
+	margin: 20px auto;
+	animation: sport 18s linear 0s infinite normal;
+	cursor: pointer;
+	border:3px solid #A0ACB6;
+	float: left;
+}
+@keyframes sport{
+	from{
+		transform: rotateZ(0deg);
+	}to{
+		transform: rotateZ(360deg);
+	}
+}
+#headImg:hover{
+	animation-play-state: paused;
+
+}
+/*about结束*/
+
+/*skill开始*/
+#skill{
+	color:#35536B ;
+	background:#A0CBD2;
+	position: relative;
+	padding: 50px 0;
+}
+#skill ul li{
+	width: 500px;
+	height: 200px;
+	border: 1px solid black;
+}
+.skill_list{
+	height: 300px;
+}
+.skill_list .box{
+	padding:16px 0;
+}
+.skill_list .progress-bar{
+	background:#35536B ;
+}
+/*skill结束*/
+/*.portfolio开始*/
+#portfolio{
+	background:#BBB799;
+	position: relative;
+	padding: 50px 0;
+}
+
+/*portfolio结束*/
+/*contact开始*/
+#contact{
+	color: #fff;
+	background:#BBB799;
+}
+#contact .info{
+	padding:20px 0;
+}
+#contact i{
+	color:  #fff;
+}
+#contact div.icon:hover , 
+#contact div.icon:hover i{
+	color: #DDF361;
+}
+#contact .contact_box{
+	padding:20px 0;
+}
+/*contact结束*/
