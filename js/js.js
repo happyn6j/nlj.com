@@ -73,7 +73,7 @@ $(function(){
 		if(screen.width<=500){
 			// $(this).width(10);
 			console.log(($(this).parent().index()-1)%4);
-			$('#about ul li').eq(($(this).parent().index(-1)%4).width(360).siblings().width(10);
+			$('#about ul li').eq(($(this).parent().index()-1)%4).width(360).siblings().width(10);
 		}
 	},function(){
 
