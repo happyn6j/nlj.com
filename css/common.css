@@ -285,8 +285,94 @@ p{
 	background:#BBB799;
 	position: relative;
 	padding: 50px 0;
+	height: 600px;
 }
-
+.box{
+	width: 100%;
+	position: relative;
+}
+.image{
+	width: 410px;
+	height: 260px;
+	margin:0 auto;
+	margin-top:80px;
+	position: relative;
+	cursor: pointer;
+}
+.block{
+	width: 400px;
+	height: 250px;
+	border:2px solid #FCC837;
+	padding:5px;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.block a{
+	font-size: 50px;
+	color: #fff;
+	text-decoration: none;
+}
+.block a:hover{
+	color: #FCC837;
+}
+.b1,.b2,.b3,.b4,.b5{
+	background:#F6E6CC;
+	text-align: center;
+	line-height: 250px;
+	transition: all 2s ease-in-out;
+}
+.b1{
+	top:40px;
+	left:150px;
+	transform: scale(0.6);
+	z-index: 1;
+	opacity: 0.1;
+}
+.b2{
+	top:40px;
+	left:260px;
+	transform: scale(1);
+	z-index: 9;
+	opacity: 0.5;
+}
+.b3{
+	top:40px;
+	left:0px;
+	transform: scale(1.5);
+	z-index: 99;
+	opacity: 1;
+}
+.b4{
+	top:40px;
+	left:-260px;
+	transform: scale(1);
+	z-index: 9;
+	opacity: 0.5;
+}
+.b5{
+	top:40px;
+	left:-150px;
+	transform: scale(0.6);
+	z-index: 1;
+	opacity: 0.1;
+}
+span img{
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	border-radius: 50%;
+	position: absolute;
+	top:140px;
+	cursor:pointer;
+}
+#prev img{
+	left:10px;
+	transform: rotate(180deg);
+}
+#next img{
+	right:10px;
+}
 /*portfolio结束*/
 /*contact开始*/
 #contact{
@@ -301,7 +387,7 @@ p{
 }
 #contact div.icon:hover , 
 #contact div.icon:hover i{
-	color: #DDF361;
+	color: #FCC837;
 }
 #contact .contact_box{
 	padding:20px 0;

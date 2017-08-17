@@ -42,7 +42,7 @@ $(function(){
 	$('.fa_bky_acc').hover(function(){
 		$(this).attr("src","images/bky_h.png"); 
 	},function(){
-		$(this).attr("src","images/bky.png"); 
+		$(this).attr("src","images/bky_h.png"); 
 	})
 
 	//滚动到skill执行动画
@@ -75,8 +75,37 @@ $(function(){
 			console.log(($(this).parent().index()-1)%4);
 			$('#about ul li').eq(($(this).parent().index()-1)%4).width(360).siblings().width(10);
 		}
-	},function(){
+	});
 
+	//我的作品动画
+	var jsonClass = [ 'b1' , 'b2', 'b3' , 'b4' , 'b5' ];
+	var indexBlock = 1;
+	function refrash(state){
+		for(var i=0;i<$('.block').length;i++){
+			var index;
+			var prevIndex;
+			if(state == 'next'){
+				index=(i+indexBlock)%5;
+				prevIndex=(i+indexBlock-1)%5;
+			}else if(state == 'prev'){
+				index=(i+indexBlock-1)%5;
+				prevIndex=(i+indexBlock)%5;
+				if(indexBlock<=0){
+					indexBlock=$('.block').length;
+					index=$('.block').length-1;
+					prevIndex=0;
+				}
+			}
+			$('.block').eq(i).removeClass(jsonClass[prevIndex]).addClass(jsonClass[index]);
+		}
+	}
+	$('#prev').click(function(){
+		indexBlock--;
+		refrash('prev');
+	});
+	$('#next').click(function(){
+		refrash('next');
+		indexBlock++;
 	});
 })
 
